@@ -1,0 +1,381 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4BE8B8CD-50C4-4EF5-BF5C-9490CD82951E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ZIKU</RootNamespace>
+    <AssemblyName>ZIKU!</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\ICON.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CSkin, Version=16.1.14.2, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Reference\CSkin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="OLEREO">
+      <HintPath>..\..\Reference\OLEREO.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite, Version=1.0.101.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Reference\SQLite\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Design" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Control\Item\ManageXiaoChao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Control\Item\ManageXiaoChao.Designer.cs">
+      <DependentUpon>ManageXiaoChao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\Toolkit\Category\SwitchPtoS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Control\Toolkit\Category\SwitchPtoS.Designer.cs">
+      <DependentUpon>SwitchPtoS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\Toolkit\ExcludeMatchPath.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Control\Toolkit\ExcludeMatchPath.Designer.cs">
+      <DependentUpon>ExcludeMatchPath.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\Toolkit\MatchVarValue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Control\Toolkit\MatchVarValue.Designer.cs">
+      <DependentUpon>MatchVarValue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\Toolkit\MatchPathItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Control\Toolkit\MatchPathItem.Designer.cs">
+      <DependentUpon>MatchPathItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\SearchForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Control\SearchForm.designer.cs">
+      <DependentUpon>SearchForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\Toolkit\ReplaceItemValue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Control\Toolkit\ReplaceItemValue.Designer.cs">
+      <DependentUpon>ReplaceItemValue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Library\DataBase.cs" />
+    <Compile Include="Library\DataBaseCheckUP.cs" />
+    <Compile Include="Library\myZiku.cs" />
+    <Compile Include="Control\Toolkit\Variable\Edit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Control\Toolkit\Variable\Edit.Designer.cs">
+      <DependentUpon>Edit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\Toolkit\Variable\Manage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Control\Toolkit\Variable\Manage.Designer.cs">
+      <DependentUpon>Manage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\FileInfoBox.cs" />
+    <Compile Include="Control\Toolkit\DataBase\Edit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Control\Toolkit\DataBase\Edit.Designer.cs">
+      <DependentUpon>Edit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\Toolkit\DataBase\Manage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Control\Toolkit\DataBase\Manage.Designer.cs">
+      <DependentUpon>Manage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\Toolkit\DataBase\NotExists.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Control\Toolkit\DataBase\NotExists.Designer.cs">
+      <DependentUpon>NotExists.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\zMenu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Control\Toolkit\Category\Manage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Control\Toolkit\Category\Manage.Designer.cs">
+      <DependentUpon>Manage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\Item\Item.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Control\Item\Item.Designer.cs">
+      <DependentUpon>Item.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\Item\Manage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Control\Item\Manage.Designer.cs">
+      <DependentUpon>Manage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\Item\XiaoChao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Control\Item\XiaoChao.Designer.cs">
+      <DependentUpon>XiaoChao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\setting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Control\setting.Designer.cs">
+      <DependentUpon>setting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Control\welcome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Control\welcome.Designer.cs">
+      <DependentUpon>welcome.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Control\Item\ManageXiaoChao.resx">
+      <DependentUpon>ManageXiaoChao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\Toolkit\Category\SwitchPtoS.resx">
+      <DependentUpon>SwitchPtoS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\Toolkit\ExcludeMatchPath.resx">
+      <DependentUpon>ExcludeMatchPath.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\Toolkit\MatchVarValue.resx">
+      <DependentUpon>MatchVarValue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\Toolkit\MatchPathItem.resx">
+      <DependentUpon>MatchPathItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\SearchForm.resx">
+      <DependentUpon>SearchForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\Toolkit\ReplaceItemValue.resx">
+      <DependentUpon>ReplaceItemValue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\Toolkit\Variable\Edit.resx">
+      <DependentUpon>Edit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\Toolkit\Variable\Manage.resx">
+      <DependentUpon>Manage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\Toolkit\DataBase\Edit.resx">
+      <DependentUpon>Edit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\Toolkit\DataBase\Manage.resx">
+      <DependentUpon>Manage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\Toolkit\DataBase\NotExists.resx">
+      <DependentUpon>NotExists.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\Toolkit\Category\Manage.resx">
+      <DependentUpon>Manage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\Item\Item.resx">
+      <DependentUpon>Item.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\Item\Manage.resx">
+      <DependentUpon>Manage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\Item\XiaoChao.resx">
+      <DependentUpon>XiaoChao.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\setting.resx">
+      <DependentUpon>setting.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\welcome.resx">
+      <DependentUpon>welcome.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="App.config" />
+    <None Include="ClassDiagram1.cd" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="IWshRuntimeLibrary">
+      <Guid>{F935DC20-1CF0-11D0-ADB9-00C04FD58A0B}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DB.mc" />
+    <None Include="Resources\ICON.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\noicon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\MainBackGround.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SearchBackGround.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
